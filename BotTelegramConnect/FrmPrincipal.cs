@@ -50,5 +50,12 @@ namespace BotTelegramConnect
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void imagemLocalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmEnvioImagemLocal();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
