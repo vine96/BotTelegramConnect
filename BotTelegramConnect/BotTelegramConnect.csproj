@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEnvioImagemWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnvioImagemWeb.Designer.cs">
+      <DependentUpon>FrmEnvioImagemWeb.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEnvioTexto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEnvioImagemWeb.resx">
+      <DependentUpon>FrmEnvioImagemWeb.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEnvioTexto.resx">
       <DependentUpon>FrmEnvioTexto.cs</DependentUpon>
     </EmbeddedResource>
