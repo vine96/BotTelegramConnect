@@ -36,5 +36,12 @@ namespace BotTelegramConnect
         {
             Close();
         }
+
+        private void envioDeMensagemSimplesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmEnvioTexto();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

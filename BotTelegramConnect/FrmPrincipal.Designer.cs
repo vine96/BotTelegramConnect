@@ -72,8 +72,9 @@
             // envioDeMensagemSimplesToolStripMenuItem
             // 
             this.envioDeMensagemSimplesToolStripMenuItem.Name = "envioDeMensagemSimplesToolStripMenuItem";
-            this.envioDeMensagemSimplesToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.envioDeMensagemSimplesToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.envioDeMensagemSimplesToolStripMenuItem.Text = "Envio de mensagem simples";
+            this.envioDeMensagemSimplesToolStripMenuItem.Click += new System.EventHandler(this.envioDeMensagemSimplesToolStripMenuItem_Click);
             // 
             // eToolStripMenuItem
             // 
@@ -88,13 +89,13 @@
             // imagemDaWebToolStripMenuItem
             // 
             this.imagemDaWebToolStripMenuItem.Name = "imagemDaWebToolStripMenuItem";
-            this.imagemDaWebToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagemDaWebToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.imagemDaWebToolStripMenuItem.Text = "Imagem da web";
             // 
             // imagemLocalToolStripMenuItem
             // 
             this.imagemLocalToolStripMenuItem.Name = "imagemLocalToolStripMenuItem";
-            this.imagemLocalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagemLocalToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.imagemLocalToolStripMenuItem.Text = "Imagem local";
             // 
             // envioDeMensagemComEmojiToolStripMenuItem
