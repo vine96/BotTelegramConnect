@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.lbMensagens = new System.Windows.Forms.ListBox();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -35,6 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.prbStatusEnvio = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.timerControle = new System.Windows.Forms.Timer(this.components);
+            this.txtTempo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,6 +67,7 @@
             this.btnEnviar.TabIndex = 2;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // btnCarregar
             // 
@@ -101,11 +106,31 @@
             this.label3.Text = "Aguardando envio...";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtTempo
+            // 
+            this.txtTempo.BackColor = System.Drawing.SystemColors.Info;
+            this.txtTempo.Location = new System.Drawing.Point(686, 11);
+            this.txtTempo.Name = "txtTempo";
+            this.txtTempo.Size = new System.Drawing.Size(73, 20);
+            this.txtTempo.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(631, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Tempo:";
+            // 
             // FrmEnvioComTemporizador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 365);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtTempo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.prbStatusEnvio);
             this.Controls.Add(this.label2);
@@ -135,5 +160,8 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar prbStatusEnvio;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timerControle;
+        private System.Windows.Forms.TextBox txtTempo;
+        private System.Windows.Forms.Label label4;
     }
 }
