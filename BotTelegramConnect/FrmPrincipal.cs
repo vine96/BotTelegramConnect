@@ -57,5 +57,12 @@ namespace BotTelegramConnect
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void envioDeMensagemComEmojiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmTextoComEmoji();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

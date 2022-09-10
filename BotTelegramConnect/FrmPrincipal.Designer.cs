@@ -89,14 +89,14 @@
             // imagemDaWebToolStripMenuItem
             // 
             this.imagemDaWebToolStripMenuItem.Name = "imagemDaWebToolStripMenuItem";
-            this.imagemDaWebToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagemDaWebToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.imagemDaWebToolStripMenuItem.Text = "Imagem da web";
             this.imagemDaWebToolStripMenuItem.Click += new System.EventHandler(this.imagemDaWebToolStripMenuItem_Click);
             // 
             // imagemLocalToolStripMenuItem
             // 
             this.imagemLocalToolStripMenuItem.Name = "imagemLocalToolStripMenuItem";
-            this.imagemLocalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagemLocalToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.imagemLocalToolStripMenuItem.Text = "Imagem local";
             this.imagemLocalToolStripMenuItem.Click += new System.EventHandler(this.imagemLocalToolStripMenuItem_Click);
             // 
@@ -105,6 +105,7 @@
             this.envioDeMensagemComEmojiToolStripMenuItem.Name = "envioDeMensagemComEmojiToolStripMenuItem";
             this.envioDeMensagemComEmojiToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.envioDeMensagemComEmojiToolStripMenuItem.Text = "Envio de mensagem com emoji";
+            this.envioDeMensagemComEmojiToolStripMenuItem.Click += new System.EventHandler(this.envioDeMensagemComEmojiToolStripMenuItem_Click);
             // 
             // envioDeMensagemComTemporizadorToolStripMenuItem
             // 
