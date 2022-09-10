@@ -30,18 +30,7 @@ namespace BotTelegramConnect
                 var telegramBot = new TelegramBotClient("TOKEN");
                 var strMensagem = txtMensagem.Text.Trim();
 
-                if (strMensagem.Contains(":white_check_mark:"))
-                {
-                    strMensagem = strMensagem.Replace(":white_check_mark:", char.ConvertFromUtf32(0x2705));
-                }
-                if (strMensagem.Contains(":grin:"))
-                {
-                    strMensagem = strMensagem.Replace(":grin:", char.ConvertFromUtf32(0x1F601));
-                }
-                if (strMensagem.Contains(":cupid:"))
-                {
-                    strMensagem = strMensagem.Replace(":cupid:", char.ConvertFromUtf32(0x1F498));
-                }
+                strMensagem = EmojiConfig.Config(strMensagem);
 
                 await telegramBot.SendTextMessageAsync(chatId: "CHAT ID", text: strMensagem, parseMode: ParseMode.Html);
                 MessageBox.Show("Sua mensagem foi enviada com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);

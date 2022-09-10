@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot;
 
 namespace BotTelegramConnect
 {
@@ -51,9 +53,45 @@ namespace BotTelegramConnect
             throw new NotImplementedException();
         }
 
-        private void timerControle_Tick(object sender, EventArgs e)
+        private void PararTimerControle()
         {
+            timerControle.Enabled = false;
+            timerControle.Tick -= new EventHandler(TimerControle_Tick);
+            this.BackColor = SystemColors.Control;
+            btnEnviar.Enabled = true;
+        }
 
+        private void AtualizarProgressoEnvio()
+        {
+            prbStatusEnvio.Value++;
+            lblStatusEnvio.Text = string.Format("Enviando {0} de {1}...", posicaoEnvio, lstMensagens.Count);
+        }
+
+
+        private async void timerControle_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                var telegramBot = new TelegramBotClient("TOKEN");
+                var mensagemAtual = lstMensagens[posicaoEnvio];
+
+                mensagemAtual = EmojiConfig.Config(mensagemAtual);
+
+                await telegramBot.SendTextMessageAsync(chatId: "CHAT ID", text: mensagemAtual, parseMode: ParseMode.Html);
+
+                posicaoEnvio++;
+                AtualizarProgressoEnvio();
+
+                if(posicaoEnvio == lstMensagens.Count)
+                {
+                    PararTimerControle();
+                }
+            }
+            catch (Exception ex)
+            {
+                PararTimerControle();
+                MessageBox.Show("Ocorreu algum erro ao enviar as mensagens!" + ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCarregar_Click(object sender, EventArgs e)

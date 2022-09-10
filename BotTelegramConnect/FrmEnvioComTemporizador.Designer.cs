@@ -33,7 +33,7 @@
             this.lbMensagens = new System.Windows.Forms.ListBox();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnCarregar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblStatusEnvio = new System.Windows.Forms.Label();
             this.prbStatusEnvio = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.timerControle = new System.Windows.Forms.Timer(this.components);
@@ -79,15 +79,15 @@
             this.btnCarregar.UseVisualStyleBackColor = true;
             this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
             // 
-            // label2
+            // lblStatusEnvio
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Status de envio:";
+            this.lblStatusEnvio.AutoSize = true;
+            this.lblStatusEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusEnvio.Location = new System.Drawing.Point(26, 298);
+            this.lblStatusEnvio.Name = "lblStatusEnvio";
+            this.lblStatusEnvio.Size = new System.Drawing.Size(100, 13);
+            this.lblStatusEnvio.TabIndex = 4;
+            this.lblStatusEnvio.Text = "Status de envio:";
             // 
             // prbStatusEnvio
             // 
@@ -133,7 +133,7 @@
             this.Controls.Add(this.txtTempo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.prbStatusEnvio);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblStatusEnvio);
             this.Controls.Add(this.btnCarregar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lbMensagens);
@@ -157,7 +157,7 @@
         private System.Windows.Forms.ListBox lbMensagens;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnCarregar;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lblStatusEnvio;
         private System.Windows.Forms.ProgressBar prbStatusEnvio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timerControle;
