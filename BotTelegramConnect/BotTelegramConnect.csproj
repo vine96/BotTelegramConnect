@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEnvioComTemporizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnvioComTemporizador.Designer.cs">
+      <DependentUpon>FrmEnvioComTemporizador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEnvioImagemLocal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEnvioComTemporizador.resx">
+      <DependentUpon>FrmEnvioComTemporizador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEnvioImagemLocal.resx">
       <DependentUpon>FrmEnvioImagemLocal.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mensagem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

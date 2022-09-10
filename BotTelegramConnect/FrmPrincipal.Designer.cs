@@ -112,6 +112,7 @@
             this.envioDeMensagemComTemporizadorToolStripMenuItem.Name = "envioDeMensagemComTemporizadorToolStripMenuItem";
             this.envioDeMensagemComTemporizadorToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
             this.envioDeMensagemComTemporizadorToolStripMenuItem.Text = "Envio de mensagem com temporizador";
+            this.envioDeMensagemComTemporizadorToolStripMenuItem.Click += new System.EventHandler(this.envioDeMensagemComTemporizadorToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
