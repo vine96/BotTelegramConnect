@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot;
@@ -44,19 +39,14 @@ namespace BotTelegramConnect
             timerControle.Interval = (60 * 1000) * min;
             timerControle.Enabled = true;
 
-            this.timerControle.Tick += new EventHandler(TimerControle_Tick);
+            this.timerControle.Tick += new EventHandler(TimerControle_TickAsync);
             this.BackColor = Color.Red;
-        }
-
-        private void TimerControle_Tick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void PararTimerControle()
         {
             timerControle.Enabled = false;
-            timerControle.Tick -= new EventHandler(TimerControle_Tick);
+            timerControle.Tick -= new EventHandler(TimerControle_TickAsync);
             this.BackColor = SystemColors.Control;
             btnEnviar.Enabled = true;
         }
@@ -68,7 +58,7 @@ namespace BotTelegramConnect
         }
 
 
-        private async void timerControle_Tick(object sender, EventArgs e)
+        private async void TimerControle_TickAsync(object sender, EventArgs e)
         {
             try
             {
@@ -151,6 +141,14 @@ namespace BotTelegramConnect
             {
                 btnEnviar.Enabled = true;
                 MessageBox.Show("Não possui nenhuma mensagem escrita no documento!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void txtTempo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
             }
         }
     }
